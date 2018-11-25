@@ -34,7 +34,8 @@ class RegistrationVC: UIViewController {
                 ]
                 let values = [user.uid: userdata]
                // Database.database().reference().child("users").setValue(values)
-                Database.database().reference().child("users").setValue(values)
+                Database.database().reference().child("users").updateChildValues(values)
+               // upValue(values)
             }
             let alert1 = UIAlertController(title: "Registration", message: "Succeed!", preferredStyle: .alert)
             alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
