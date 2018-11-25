@@ -213,7 +213,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oU2-Vk-5HO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="aFf-aP-QaQ"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.png" id="aFf-aP-QaQ"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -237,10 +237,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uka-Lu-UXY">
-                                <rect key="frame" x="166" y="32" width="50" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uka-Lu-UXY">
+                                <rect key="frame" x="132" y="32" width="121" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -248,7 +248,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BpE-LY-UYw"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="list view" id="w5t-Zt-vZe"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="list view" image="pin.png" id="w5t-Zt-vZe"/>
+                    <connections>
+                        <outlet property="petNameLabel" destination="uka-Lu-UXY" id="xcs-Kq-bf7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajX-VG-Web" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -273,6 +276,10 @@
             <point key="canvasLocation" x="1663" y="125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="map.png" width="32" height="32"/>
+        <image name="pin.png" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wmv-z9-g0p"/>
     </inferredMetricsTieBreakers>
