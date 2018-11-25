@@ -1,0 +1,6 @@
+framework module Pods_Cinder {
+  umbrella header "Pods-Cinder-umbrella.h"
+
+  export *
+  module * { export * }
+}
