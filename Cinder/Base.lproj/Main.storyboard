@@ -224,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="2614" y="457"/>
         </scene>
-        <!--Item 1-->
+        <!--list view-->
         <scene sceneID="7MU-LR-ryL">
             <objects>
-                <viewController id="u7v-dd-AYx" sceneMemberID="viewController">
+                <viewController id="u7v-dd-AYx" customClass="listViewController" customModule="Cinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZQx-PC-sZC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +248,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BpE-LY-UYw"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="w5t-Zt-vZe"/>
+                    <tabBarItem key="tabBarItem" title="list view" id="w5t-Zt-vZe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajX-VG-Web" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,7 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseCore
-//import FirebaseAuth
+import FirebaseAuth
+import FirebaseDatabase
 class RegistrationVC: UIViewController {
     @IBOutlet weak var PetName: UITextField!
     @IBOutlet weak var emailField: UITextField!
@@ -25,7 +26,15 @@ class RegistrationVC: UIViewController {
         let password = passwordField.text
         if email != "" && password != "" {
             Auth.auth().createUser(withEmail: email!, password: password!) { (authResult, error) in
-                guard (authResult?.user) != nil else { return }
+                guard let user = authResult?.user else { return }
+                let userdata = [
+                    
+                    "petName": self.PetName.text,
+                    "email": self.emailField.text
+                ]
+                let values = [user.uid: userdata]
+               // Database.database().reference().child("users").setValue(values)
+                Database.database().reference().child("users").setValue(values)
             }
             let alert1 = UIAlertController(title: "Registration", message: "Succeed!", preferredStyle: .alert)
             alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
